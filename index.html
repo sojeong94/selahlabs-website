@@ -143,38 +143,44 @@
     /* 히어로 중앙 성경구절 */
     .hero-verse-center {
       position: absolute;
-      top: 38%; left: 50%;
+      top: 30%; left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1; width: 100%;
-      padding: 0 32px;
+      max-width: 700px;
+      padding: 0 28px;
       text-align: center;
       pointer-events: none;
     }
     .hero-verse {
       font-family: var(--serif); font-style: italic;
-      font-size: clamp(1.05rem, 2.8vw, 1.5rem); font-weight: 400;
-      color: rgba(255,255,255,0.92); margin-bottom: 10px;
-      line-height: 1.55;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+      font-size: clamp(1rem, 2.6vw, 1.45rem); font-weight: 600;
+      color: rgba(255,255,255,0.95); margin-bottom: 10px;
+      line-height: 1.6;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+      word-break: keep-all; overflow-wrap: break-word;
     }
     .hero-ref {
-      font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.14em;
+      font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--gold2); opacity: 0.9;
     }
 
     /* 히어로 배지 — 강조 */
     .hero-badge {
       display: inline-block; font-family: var(--sans);
-      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em;
+      font-size: clamp(0.75rem, 2vw, 0.88rem);
+      font-weight: 500; letter-spacing: 0.03em;
       color: #fff; background: var(--gold);
-      padding: 9px 22px; border-radius: 4px; margin-bottom: 16px;
+      padding: 9px 20px; border-radius: 4px; margin-bottom: 16px;
+      word-break: keep-all; white-space: normal; line-height: 1.4;
+      max-width: 100%;
     }
     .hero-h1 {
       font-family: var(--serif);
-      font-size: clamp(2.8rem, 7vw, 6rem);
-      font-weight: 700; line-height: 1.1;
+      font-size: clamp(2.2rem, 6vw, 5.5rem);
+      font-weight: 700; line-height: 1.12;
       color: #fff; margin-bottom: 28px;
       text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      word-break: keep-all; overflow-wrap: break-word;
     }
     .hero-h1 em { font-style: italic; color: var(--gold2); }
     .hero-form-row {
@@ -272,7 +278,7 @@
       font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 6px;
     }
-    .stat-l { font-family: var(--sans); font-size: 0.72rem; color: var(--text2); line-height: 1.5; }
+    .stat-l { font-family: var(--sans); font-size: 0.72rem; color: var(--text2); line-height: 1.5; word-break: keep-all; overflow-wrap: break-word; }
 
     /* ── MARQUEE ── */
     #marquee { overflow: hidden; background: var(--gold2); padding: 14px 0; }
@@ -285,7 +291,7 @@
     /* ── SECTION SHARED ── */
     .sec-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
     .sec-label { font-family: var(--sans); font-size: 0.67rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-    .sec-title { font-family: var(--serif); font-size: clamp(1.9rem, 4.5vw, 3.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 48px; color: var(--text); }
+    .sec-title { font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 3rem); font-weight: 700; line-height: 1.25; margin-bottom: 48px; color: var(--text); word-break: keep-all; overflow-wrap: break-word; }
     .sec-title em { font-style: italic; color: var(--gold); font-weight: 400; }
 
     /* ── FEATURES ── */
@@ -303,9 +309,9 @@
     .feat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
     .feat-card:hover .feat-img img { transform: scale(1.06); }
     .feat-body { padding: 20px 16px 22px; }
-    .feat-main { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-    .feat-sub { font-family: var(--sans); font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
-    .feat-desc { font-family: var(--sans); font-size: 0.76rem; color: var(--text2); line-height: 1.8; }
+    .feat-main { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 2px; word-break: keep-all; }
+    .feat-sub { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; word-break: keep-all; }
+    .feat-desc { font-family: var(--sans); font-size: 0.74rem; color: var(--text2); line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; }
 
     /* ── QUOTE (bg4 church photo) ── */
     #quote-section {
@@ -322,7 +328,7 @@
     .quote-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
     .quote-rule { width: 44px; height: 2px; background: var(--gold2); margin: 0 auto 32px; }
     .quote-mark { font-family: var(--serif); font-size: 7rem; line-height: 0.4; color: var(--gold2); opacity: 0.3; display: block; margin-bottom: 28px; }
-    blockquote { font-family: var(--serif); font-size: clamp(1.5rem, 4vw, 2.8rem); font-weight: 400; font-style: italic; line-height: 1.5; color: #fff; margin-bottom: 24px; }
+    blockquote { font-family: var(--serif); font-size: clamp(1.2rem, 3.5vw, 2.4rem); font-weight: 400; font-style: italic; line-height: 1.6; color: #fff; margin-bottom: 24px; word-break: keep-all; overflow-wrap: break-word; }
     blockquote em { color: var(--gold2); font-style: normal; }
     .quote-ref { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
 
@@ -337,7 +343,7 @@
     }
     .testi-card:hover { box-shadow: 0 10px 32px rgba(28,20,16,0.08); transform: translateY(-3px); }
     .testi-stars { color: var(--gold2); font-size: 0.85rem; margin-bottom: 18px; letter-spacing: 2px; }
-    .testi-quote { font-family: var(--serif); font-size: 1rem; font-style: italic; line-height: 1.75; color: var(--text); margin-bottom: 24px; }
+    .testi-quote { font-family: var(--serif); font-size: clamp(0.85rem, 1.5vw, 1rem); font-style: italic; line-height: 1.8; color: var(--text); margin-bottom: 24px; word-break: keep-all; overflow-wrap: break-word; }
     .testi-person { display: flex; align-items: center; gap: 14px; }
     .testi-avatar {
       width: 48px; height: 48px; border-radius: 50%;
@@ -354,9 +360,9 @@
     .emo-bg { position: absolute; inset: 0; background: url('bg5.jpg') center center / cover no-repeat; }
     .emo-bg::after { content: ''; position: absolute; inset: 0; background: rgba(28,20,16,0.75); }
     .emo-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
-    .emo-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 28px; }
+    .emo-title { font-family: var(--serif); font-size: clamp(1.7rem, 4.5vw, 3.2rem); font-weight: 700; line-height: 1.25; color: #fff; margin-bottom: 28px; word-break: keep-all; overflow-wrap: break-word; }
     .emo-title strong { font-style: italic; font-weight: 400; color: var(--gold2); }
-    .emo-body { font-family: var(--sans); font-size: clamp(0.88rem, 2vw, 1rem); color: rgba(255,255,255,0.75); line-height: 2.1; margin-bottom: 44px; font-weight: 300; }
+    .emo-body { font-family: var(--sans); font-size: clamp(0.85rem, 1.8vw, 0.97rem); color: rgba(255,255,255,0.75); line-height: 2; margin-bottom: 44px; font-weight: 300; word-break: keep-all; overflow-wrap: break-word; }
     .emo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; }
     .emo-tag { font-family: var(--sans); font-size: 0.73rem; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.07); padding: 7px 16px; border-radius: 100px; }
 
@@ -675,9 +681,9 @@ const T = {
     top_bar:'사전신청 선착순 7일간 프리미엄 무제한',
     benefit:'사전신청 선착순 7일간 프리미엄 무제한',
     counter_pre:'이미', counter_post:'명이 기다리고 있습니다',
-    stat1_num:'31,192', stat1_lbl:'성경 구절 완전 수록\nKRV · KJV',
-    stat2_num:'880+', stat2_lbl:'찬송가 수록\n63개 언어 번역',
-    stat3_num:'기도', stat3_lbl:'똑똑한 기도 도우미\n응답 감사 일지',
+    stat1_num:'31,192', stat1_lbl:'성경 구절 완전 수록<br>KRV · KJV',
+    stat2_num:'880+', stat2_lbl:'찬송가 수록<br>63개 언어 번역',
+    stat3_num:'기도', stat3_lbl:'똑똑한 기도 도우미<br>응답 감사 일지',
     placeholder:'이메일 주소를 입력하세요',
     btn_hero:'출시 알림 받기', btn_cta:'사전 신청하기',
     form_note:'스팸 없음 · 사전 신청자는 선착순 7일 프리미엄 무제한',
@@ -723,9 +729,9 @@ const T = {
     hero_verse_ref:'Philippians 4:13',
     benefit:'Early adopters · <strong>7-day Premium UNLIMITED</strong> at launch',
     counter_pre:'Already', counter_post:'people are waiting',
-    stat1_num:'31,192', stat1_lbl:'Bible verses complete\nKRV · KJV',
-    stat2_num:'880+', stat2_lbl:'Hymns included\nin 63 languages',
-    stat3_num:'Prayer', stat3_lbl:'Smart Prayer Guide\nanswered prayer log',
+    stat1_num:'31,192', stat1_lbl:'Bible verses complete<br>KRV · KJV',
+    stat2_num:'880+', stat2_lbl:'Hymns included<br>in 63 languages',
+    stat3_num:'Prayer', stat3_lbl:'Smart Prayer Guide<br>answered prayer log',
     placeholder:'Enter your email address',
     btn_hero:'Get Launch Notification', btn_cta:'Join Free',
     form_note:'No spam · Early adopters get 3 months Premium free',
@@ -771,9 +777,9 @@ const T = {
     hero_verse_ref:'腓立比书 4:13',
     benefit:'提前注册 · 上线后<strong>限时7天高级版无限制</strong>',
     counter_pre:'已有', counter_post:'人正在等待',
-    stat1_num:'31,192', stat1_lbl:'圣经经文完整收录\nKRV · KJV',
-    stat2_num:'880+', stat2_lbl:'赞美诗收录\n63种语言翻译',
-    stat3_num:'祷告', stat3_lbl:'智能祷告助手\n蒙恩感谢记录',
+    stat1_num:'31,192', stat1_lbl:'圣经经文完整收录<br>KRV · KJV',
+    stat2_num:'880+', stat2_lbl:'赞美诗收录<br>63种语言翻译',
+    stat3_num:'祷告', stat3_lbl:'智能祷告助手<br>蒙恩感谢记录',
     placeholder:'请输入您的电子邮件',
     btn_hero:'获取上线通知', btn_cta:'免费申请',
     form_note:'无垃圾邮件 · 提前注册享限时7天高级版无限制',
@@ -818,9 +824,9 @@ const T = {
     hero_verse_ref:'ピリピ人への手紙 4:13',
     benefit:'事前登録者全員 · リリース後<strong>先着順7日間プレミアム無制限</strong>',
     counter_pre:'すでに', counter_post:'人が待っています',
-    stat1_num:'31,192', stat1_lbl:'聖書の節を完全収録\nKRV · KJV',
-    stat2_num:'880+', stat2_lbl:'讃美歌を収録\n63言語に対応',
-    stat3_num:'祈り', stat3_lbl:'スマート祈りアシスタント\n感謝日記機能',
+    stat1_num:'31,192', stat1_lbl:'聖書の節を完全収録<br>KRV · KJV',
+    stat2_num:'880+', stat2_lbl:'讃美歌を収録<br>63言語に対応',
+    stat3_num:'祈り', stat3_lbl:'スマート祈りアシスタント<br>感謝日記機能',
     placeholder:'メールアドレスを入力してください',
     btn_hero:'リリース通知を受け取る', btn_cta:'無料で登録する',
     form_note:'スパムなし · 事前登録者は先着順7日間プレミアム無制限',
@@ -866,9 +872,9 @@ const T = {
     hero_verse_ref:'Filipenses 4:13',
     benefit:'Registro anticipado · <strong>7 días Premium ILIMITADO</strong> al lanzar',
     counter_pre:'Ya', counter_post:'personas están esperando',
-    stat1_num:'31,192', stat1_lbl:'Versículos bíblicos\nKRV · KJV completos',
-    stat2_num:'880+', stat2_lbl:'Himnos incluidos\nen 63 idiomas',
-    stat3_num:'Oración', stat3_lbl:'Asistente de oración\ndiario de respuestas',
+    stat1_num:'31,192', stat1_lbl:'Versículos bíblicos<br>KRV · KJV completos',
+    stat2_num:'880+', stat2_lbl:'Himnos incluidos<br>en 63 idiomas',
+    stat3_num:'Oración', stat3_lbl:'Asistente de oración<br>diario de respuestas',
     placeholder:'Ingrese su correo electrónico',
     btn_hero:'Recibir notificación', btn_cta:'Registrarse gratis',
     form_note:'Sin spam · Registro anticipado = 3 meses Premium gratis',
